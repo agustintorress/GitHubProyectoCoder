@@ -1,0 +1,316 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    background-color: #f4f4f4
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2{
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+img{
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 20px;
+    overflow: hidden;
+}
+
+/* Navbar */
+
+.navbar {
+    background-color: #35424a;
+    color: white;
+    height: 90px;
+    border-bottom: 3px solid #e8491d;
+}
+
+.navbar .flex {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar a{
+    color: white;
+    padding: 10px;
+    margin: 0 5px;
+    text-transform: uppercase;
+}
+
+.navbar a:hover{
+    border-bottom: solid 2px #fff;
+}
+
+.navbar span{
+    color: #e8491d;
+}
+
+
+/* Showcase */
+
+#showcase{
+    min-height: 400px;
+    background:url(../assets/computer.jpg) no-repeat  ;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    
+}
+
+#showcase h1{
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#showcase p{
+    font-size: 20px;
+}
+
+/* Newsletter */
+
+#newsletter{
+    padding: 25px;
+    color: white;
+    background: #35424a;
+}
+
+#newsletter .flex{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#newsletter input[type="email"]{
+    outline: none;
+    padding: 18px;
+    height: 25px;
+    width: 350px;
+    border: 0;
+}
+
+.boton1{
+    height: 38px;
+    background: #e8491d;
+    border: 0;
+    padding: 0 20px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Herramientas */
+
+
+#cajas{
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+#cajas img{
+    width: 50px;
+    margin: 5px;
+}
+
+.caja{
+    margin: 40px 0;
+}
+
+.recuadro{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+}
+
+#cajas .recuadro{
+    width: 300px;
+}
+
+#cajas .flex{
+    flex-direction: column;
+}
+
+.caja:hover{
+    transform: translateY(-15px);
+}
+
+/* Footer */
+
+footer{
+    background-color: #e8491d;
+    height: 110px;
+    text-align: center;
+    padding: 35px 0;
+    text-transform: uppercase;
+    color: white;
+    font-size: 18px;
+}
+
+
+/* SOBRE NOSOTROS */
+
+.nosotros .recuadro{
+    background-color: #35424a;
+    color: white;
+    text-align: center;
+    margin: 50px;
+    padding: 10px;
+}
+
+.nosotros {
+    margin: 20px 0;
+}
+
+.nosotros .sub-titulo{
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+
+
+/* Servicios */
+
+#servicios .grid{
+    margin: 20px 0;
+    grid-template-columns: 60% 40%;
+    gap:45px;
+    overflow: hidden;
+}
+
+.barra-lateral {
+    text-align: left;
+    margin-left: 40px;
+}
+
+.barra-lateral .recuadro{
+    height: 410px;
+}
+.comentario{
+    width: 100%;
+    height: 300px;
+    line-height: 2;
+}
+
+#comentario{
+    width: 100%;
+}
+
+.formulario input{
+    outline: none;
+    width: 100%;
+}
+
+.titulo-principal{
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    border-bottom: solid 1px black;
+}
+
+
+
+
+/* Tabletas */
+
+@media(max-width: 768px){
+
+    .header{
+        margin-bottom: 5px;
+    }
+    .navbar{
+        height: 110px;
+    }
+    .navbar .flex{
+        flex-direction: column;
+    }
+
+    .navbar ul{
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    #showcase h1{
+        margin-top: 60px;
+    }
+
+    .grid,
+    #cajas .container .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }  
+
+    
+    .caja{
+        margin-left: 26%;
+    }
+
+    #newsletter h1,
+    #newsletter form{
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    #servicios .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: none;
+    }
+}
+
+@media(max-width: 500px) {
+    #newsletter .boton1{
+        display: block;
+        width: 100%;
+    }
+
+    #newsletter input[type="email"]{
+        margin-bottom: 5px;
+    }
+}
